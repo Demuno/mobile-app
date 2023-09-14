@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'recipe.dart';
 
 void main() {
@@ -11,13 +12,12 @@ class RecipeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = ThemeData();
+
     return MaterialApp(
       title: 'Recipes App',
       theme: theme.copyWith(
-        colorScheme: theme.colorScheme.copyWith(
-          primary: Colors.grey,
-          secondary: Colors.black
-        ),
+        colorScheme: theme.colorScheme
+            .copyWith(primary: Colors.grey, secondary: Colors.black),
       ),
       home: const MyHomePage(title: 'Recipes App'),
     );
@@ -42,6 +42,17 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  Widget buildRecipeCard(Recipe recipe) {
+    return Card(
+      child: Column(
+        children: <Widget>[
+          Image(image: AssetImage('image.jpg')),
+          Text(recipe.description),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: ListView.builder(
           itemCount: Recipe.Exemplos.length,
           itemBuilder: (BuildContext context, int index) {
-            return Text(Recipe.Exemplos[index].description);
+            return buildRecipeCard(Recipe.Exemplos[index]);
           },
         ),
       ),
