@@ -10,14 +10,14 @@ void main() {
                 radius: 50.0,
                 backgroundImage: AssetImage('images/heroi.jpg'),
               ),
-              Text("heroi",
+              Text("panda",
                   style: TextStyle(
                       fontSize: 40,
                       color: Colors.white,
                       fontFamily: "Pacifico",
                       fontWeight: FontWeight.bold)),
               Text(
-                "Desenvolvedor - fullstack | mobile",
+                "Analista de Dados Python | Apache Spark | SQL",
                 style: TextStyle(
                     fontFamily: 'SourceSans',
                     fontSize: 20,
@@ -35,7 +35,7 @@ void main() {
                     width: 10.0,
                   ),
                   Text(
-                    "+55 11 949940935",
+                    "+55 11 912345678",
                     style: TextStyle(
                       color: Color.fromARGB(255, 0, 0, 0),
                       fontFamily: 'SourceSans',
@@ -54,7 +54,7 @@ void main() {
                     width: 10.0,
                   ),
                   Text(
-                    "josecorte-corte@hotmail.com",
+                    "mateusdemuno1@gmail.com",
                     style: TextStyle(
                       color: Color.fromARGB(255, 0, 0, 0),
                       fontFamily: 'SourceSans',
@@ -73,7 +73,7 @@ void main() {
                     width: 10.0,
                   ),
                   Text(
-                    "dev fullstack - mobile",
+                    "Data Analysis",
                     style: TextStyle(
                       color: Color.fromARGB(255, 0, 0, 0),
                       fontFamily: 'SourceSans',
