@@ -1,6 +1,6 @@
 {
-    "name": "project_mobile",
-    "short_name": "project_mobile",
+    "name": "flutter_application_new",
+    "short_name": "flutter_application_new",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

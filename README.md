@@ -1,4 +1,4 @@
-# project_mobile
+# flutter_application_new
 
 A new Flutter project.
 

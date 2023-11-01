@@ -1,72 +1,87 @@
 import 'package:flutter/material.dart';
 
-import 'recipe.dart';
-
 void main() {
-  runApp(const RecipeApp());
-}
-
-class RecipeApp extends StatelessWidget {
-  const RecipeApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    final ThemeData theme = ThemeData();
-
-    return MaterialApp(
-      title: 'Recipes App',
-      theme: theme.copyWith(
-        colorScheme: theme.colorScheme
-            .copyWith(primary: Colors.grey, secondary: Colors.black),
-      ),
-      home: const MyHomePage(title: 'Recipes App'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  Widget buildRecipeCard(Recipe recipe) {
-    return Card(
-      child: Column(
-        children: <Widget>[
-          Image(image: AssetImage('image.jpg')),
-          Text(recipe.description),
-        ],
-      ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: ListView.builder(
-          itemCount: Recipe.Exemplos.length,
-          itemBuilder: (BuildContext context, int index) {
-            return buildRecipeCard(Recipe.Exemplos[index]);
-          },
-        ),
-      ),
-    );
-  }
+  runApp(MaterialApp(
+      home: Scaffold(
+          backgroundColor: Color.fromARGB(255, 0, 0, 0),
+          body: SafeArea(
+            child: Column(children: <Widget>[
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/heroi.jpg'),
+              ),
+              Text("heroi",
+                  style: TextStyle(
+                      fontSize: 40,
+                      color: Colors.white,
+                      fontFamily: "Pacifico",
+                      fontWeight: FontWeight.bold)),
+              Text(
+                "Desenvolvedor - fullstack | mobile",
+                style: TextStyle(
+                    fontFamily: 'SourceSans',
+                    fontSize: 20,
+                    color: Colors.teal.shade100,
+                    letterSpacing: 2.5,
+                    fontWeight: FontWeight.bold),
+              ),
+              Container(
+                padding: EdgeInsets.all(10.0),
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: Row(children: <Widget>[
+                  Icon(Icons.phone, color: Color.fromARGB(255, 0, 0, 0)),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  Text(
+                    "+55 11 949940935",
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 0, 0, 0),
+                      fontFamily: 'SourceSans',
+                      fontSize: 20.0,
+                    ),
+                  )
+                ]),
+              ),
+              Container(
+                padding: EdgeInsets.all(10.0),
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: Row(children: <Widget>[
+                  Icon(Icons.email, color: Color.fromARGB(255, 0, 0, 0)),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  Text(
+                    "josecorte-corte@hotmail.com",
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 0, 0, 0),
+                      fontFamily: 'SourceSans',
+                      fontSize: 20.0,
+                    ),
+                  )
+                ]),
+              ),
+              Container(
+                padding: EdgeInsets.all(10.0),
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: Row(children: <Widget>[
+                  Icon(Icons.email, color: Color.fromARGB(255, 0, 0, 0)),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  Text(
+                    "dev fullstack - mobile",
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 0, 0, 0),
+                      fontFamily: 'SourceSans',
+                      fontSize: 20.0,
+                    ),
+                  )
+                ]),
+              ),
+            ]),
+          ))));
 }
